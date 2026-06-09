@@ -6,7 +6,7 @@ from ..controllers.student_controller import create_admission, get_students
 
 studentRouter = APIRouter()
 
-@studentRouter.post('/students_admission')
+@studentRouter.post('/students_admissions')
 def create(student: CreateStudent, db:Session = Depends(get_db)):
     return create_admission(student, db)
 
